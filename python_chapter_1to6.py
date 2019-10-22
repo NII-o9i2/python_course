@@ -188,3 +188,64 @@ else:
 
 # chapter6   dictionary
 print('******   chapter6    ******')
+phone_config = {'cpu': 'kylin980', 'resolution': '2340*1080', 'price': 4900}
+# visit dictionary
+print(phone_config)
+print(phone_config['cpu'])
+
+# add pair
+phone_config['color'] = ['black', 'blue', 'white']
+print(phone_config)
+print(phone_config['color'][1])
+
+phone_config['color'].append('yellow')
+print(phone_config)
+
+phone_config['model'] = 'Huawei p30'
+print(phone_config)
+
+phone_config[0] = 'wrong content'
+print(phone_config)
+
+del phone_config[0]
+print(phone_config)
+
+# traverse
+for v, k in phone_config.items():
+    print(v, k)
+for v in phone_config.keys():
+    print(v.title())
+
+for k in phone_config.values():
+    if isinstance(k, str):
+        print(k.upper())
+    else:
+        print('Is not a string')
+
+# nest
+
+phone_config1 = {'model': 'apple XI', 'cpu': 'A12', 'price': 7900}
+
+phone_list = [phone_config, phone_config1]
+print(phone_list)
+
+sale_list = []
+for number_list in range(1, 5):
+    new_phone = phone_config
+    sale_list.append(new_phone)
+
+print(sale_list)
+print('\n')
+mail_content = {
+    'phone': phone_config,
+    'television': {
+        'name': 'haixin',
+        'size': '57'
+    },
+    'pc': {
+        'name': 'lenonve',
+        'price': 5000,
+        'size': 14
+    }
+}
+print(mail_content)
