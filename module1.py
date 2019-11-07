@@ -11,7 +11,7 @@ class ElecCarModel(CarModel):
     def __init__(self, brand, procedure_data, bq):
         super().__init__(brand, procedure_data)
         self.battery_quantity = bq
-
+    
     def battery_charge(self, bq):
         self.battery_quantity += bq
 
